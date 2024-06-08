@@ -12,10 +12,10 @@ const questions = [
     question: "What's your go-to dessert topping?", 
     choices: ['Fresh berries', 'Whipped cream', 'Caramel drizzle'] 
   },
-  { id: 2, 
-    question: "How do you prefer your dessert to be served?", 
-    choices: ['In a cone', 'On a plate', 'On a stick'] 
-  },
+  // { id: 2, 
+  //   question: "How do you prefer your dessert to be served?", 
+  //   choices: ['In a cone', 'On a plate', 'On a stick'] 
+  // },
   // { id: 3, 
   //   question: "What's your favorite type of exercise?", 
   //   choices: ['Yoga or pilates', 'Hiking or exploring nature', 'Dancing or team sports'] 
