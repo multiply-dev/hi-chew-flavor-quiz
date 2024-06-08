@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import './Question.css';
+
 const Question = ({ question, onAnswer }) => {
   const [selectedChoice, setSelectedChoice] = useState(null);
 
@@ -20,23 +22,25 @@ const Question = ({ question, onAnswer }) => {
   }, [question]);
 
   return (
-    <div>
-      <h2>{question.question}</h2>
-      {question.choices.map((choice, index) => (
-        <button
-          key={index}
-          onClick={() => handleChoiceSelection(index)}
-          style={{
-            display: 'block',
-            margin: '10px 0',
-            backgroundColor: selectedChoice === index ? 'blue' : 'white',
-            color: selectedChoice === index ? 'white' : 'black',
-          }}
-        >
-          {choice}
-        </button>
-      ))}
-      <button onClick={handleNextClick} disabled={selectedChoice === null}>
+    <div className='question-container'>
+      <h1 className='progress-text'>{question.id}/12</h1>
+      <h1 className='question-text'>{question.question}</h1>
+      <div className="choices-container">
+        {question.choices.map((choice, index) => (
+          <button
+            className={selectedChoice === index ? 'choice-button selected' : 'choice-button'}
+            key={index}
+            onClick={() => handleChoiceSelection(index)}
+          >
+            {choice}
+          </button>
+        ))}
+      </div>
+      <button 
+        className="next-button"
+        disabled={selectedChoice === null}
+        onClick={handleNextClick}
+      >
         Next Question
       </button>
     </div>
