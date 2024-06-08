@@ -51,6 +51,7 @@ button.selected {
   color: #FFF;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   padding: 2rem 3rem 0;
 }
 

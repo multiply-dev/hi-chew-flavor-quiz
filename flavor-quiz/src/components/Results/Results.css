@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: row;
   gap: 2rem;
+  justify-content: center;
+  overflow: hidden;
   padding-top: 2rem;
-  width: 100%;
 }
 
 .flavor-container {
@@ -11,25 +12,39 @@
   color: #FFF;
   display: flex;
   flex-direction: column;
+  margin-right: 2rem;
   text-align: center;
 }
 
+/* @TODO: rework height clamp */
 .flavor-image {
-  width: 35%;
+  align-self: center;
+  max-width: 30%;
+  height: clamp(11rem, 12rem, 30rem);
+  object-fit: cover;
+  object-position: right;
+  flex-shrink: 0; 
+}
+
+@media screen and (min-width: 769px) {
+  .flavor-image {
+    height: 17rem; /* Preferred height for screens wider than 768px */
+  }
 }
 
 .flavor-text {
   font-weight: 800;
+  font-size: 30px;
   text-transform: uppercase;
 }
 
 p {
-  font-weight: bold;
   font-size: large;
 }
 
 .perfect-text {
   color: #FF6F89;
+  font-size: smaller;
   font-weight:900;
   text-shadow: 
   -1px -1px 0 #fff,  
@@ -59,7 +74,10 @@ p {
 }
 
 .pillow-image {
-  width: 50%;
+  padding: 1rem 0;
+  min-width: 10rem;
+  max-width: 17rem;
+  width: 80%;
 }
 
 .results-container {
@@ -72,7 +90,6 @@ p {
 
 .trait-name {
   color: #FFD101;
-  font-weight: bold;
   font-size: large;
   text-transform: uppercase;
 }

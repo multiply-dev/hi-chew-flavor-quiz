@@ -7,9 +7,6 @@ import candyApplePillow from '../../assets/candy-apple-pillow.png';
 import keyLimePillow from '../../assets/key-lime-pillow.png';
 import strawberryPillow from '../../assets/strawberry-pillow.png';
 
-import strawberryFull from '../../assets/strawberry-full.png';
-
-
 import './Results.css'
 
 // TODO: strongly type pesronality traits
@@ -123,7 +120,7 @@ const Results = ({ answers }) => {
         <img src={flavorImage} alt="Flavor Image" className="flavor-image" />
         <div className="flavor-container">
           <h1 className="flavor-text">
-            <span className="perfect-text">Your perfect flavor is</span>
+            <span className="perfect-text">Your perfect<br></br> flavor is</span>
             <br></br> 
             {flavor}!
           </h1>
