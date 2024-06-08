@@ -23,6 +23,11 @@ const Question = ({ question, onAnswer }) => {
 
   return (
     <div className='question-container'>
+      <h1 className='title-text'>
+        <span className="dessert-mix">Dessert Mix</span>
+        <br></br> 
+        personality quiz
+      </h1>
       <h1 className='progress-text'>{question.id}/12</h1>
       <h1 className='question-text'>{question.question}</h1>
       <div className="choices-container">
