@@ -1,25 +1,24 @@
 {
   "files": {
-    "main.css": "/hi-chew-flavor-quiz/static/css/main.c338edb8.css",
-    "main.js": "/hi-chew-flavor-quiz/static/js/main.7891f889.js",
-    "static/js/453.645b4a52.chunk.js": "/hi-chew-flavor-quiz/static/js/453.645b4a52.chunk.js",
+    "main.css": "/hi-chew-flavor-quiz/static/css/main.0ffbb98b.css",
+    "main.js": "/hi-chew-flavor-quiz/static/js/main.2e0a2da8.js",
+    "static/js/453.16a612f3.chunk.js": "/hi-chew-flavor-quiz/static/js/453.16a612f3.chunk.js",
     "static/media/Header.png": "/hi-chew-flavor-quiz/static/media/Header.18ce4bc62b8d4e98c444.png",
-    "static/media/strawberry-full.png": "/hi-chew-flavor-quiz/static/media/strawberry-full.5bb188a1a7ee9ae872c5.png",
-    "static/media/strawberry.png": "/hi-chew-flavor-quiz/static/media/strawberry.13f52b0576a8332ef000.png",
-    "static/media/keyLime.png": "/hi-chew-flavor-quiz/static/media/keyLime.051810045970d1ad2082.png",
-    "static/media/candyApple.png": "/hi-chew-flavor-quiz/static/media/candyApple.24b889c81ad952d04544.png",
+    "static/media/strawberry.png": "/hi-chew-flavor-quiz/static/media/strawberry.9602e1172f2c3ba3a1fe.png",
+    "static/media/keyLime.png": "/hi-chew-flavor-quiz/static/media/keyLime.8eee581b9d01ef317813.png",
+    "static/media/candyApple.png": "/hi-chew-flavor-quiz/static/media/candyApple.d2c56fb962a88b5181aa.png",
     "static/media/strawberry-pillow.png": "/hi-chew-flavor-quiz/static/media/strawberry-pillow.c12ecda291903ebc1b0f.png",
     "static/media/key-lime-pillow.png": "/hi-chew-flavor-quiz/static/media/key-lime-pillow.8a4b6f090e65d7f07d13.png",
     "static/media/candy-apple-pillow.png": "/hi-chew-flavor-quiz/static/media/candy-apple-pillow.5b19d0a72af9d30afca5.png",
     "static/media/Footer.png": "/hi-chew-flavor-quiz/static/media/Footer.e04a6b50a0698b6e3314.png",
     "static/media/Logo.png": "/hi-chew-flavor-quiz/static/media/Logo.7cbf0bcc36a0550d2118.png",
     "index.html": "/hi-chew-flavor-quiz/index.html",
-    "main.c338edb8.css.map": "/hi-chew-flavor-quiz/static/css/main.c338edb8.css.map",
-    "main.7891f889.js.map": "/hi-chew-flavor-quiz/static/js/main.7891f889.js.map",
-    "453.645b4a52.chunk.js.map": "/hi-chew-flavor-quiz/static/js/453.645b4a52.chunk.js.map"
+    "main.0ffbb98b.css.map": "/hi-chew-flavor-quiz/static/css/main.0ffbb98b.css.map",
+    "main.2e0a2da8.js.map": "/hi-chew-flavor-quiz/static/js/main.2e0a2da8.js.map",
+    "453.16a612f3.chunk.js.map": "/hi-chew-flavor-quiz/static/js/453.16a612f3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c338edb8.css",
-    "static/js/main.7891f889.js"
+    "static/css/main.0ffbb98b.css",
+    "static/js/main.2e0a2da8.js"
   ]
 }
