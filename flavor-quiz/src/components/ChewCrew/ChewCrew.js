@@ -11,46 +11,22 @@ const ChewCrew = ({ onSignupComplete }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState(null);
 
-  // const handleSubmit = async (event) => {
-  //   event.preventDefault();
-  //   setIsSubmitting(true);
-  //   setError(null);
-
-  //   try {
-  //     // Replace with your Mailchimp URL
-  //     const mailchimpUrl = 'YOUR_MAILCHIMP_URL_HERE';
-  //     const response = await fetch(mailchimpUrl, {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //       },
-  //       body: JSON.stringify({ email }),
-  //     });
-
-  //     if (response.ok) {
-  //       onSignupComplete();
-  //     } else {
-  //       setError('Failed to sign up. Please try again.');
-  //     }
-  //   } catch (error) {
-  //     setError('An error occurred. Please try again.');
-  //   } finally {
-  //     setIsSubmitting(false);
-  //   }
-  // };
-
   // @TODO: Add url to secrets file?
+  // @TODO: Error handling
   const handleSubmit = e => {
     setIsSubmitting(true);
     setError(null);
     e.preventDefault();
     const url = 'https://morinaga-america.us4.list-manage.com/subscribe/post-json?u=59d91747229d2e090df15562e&amp;id=cc938b2fca&amp;f_id=0058c0e1f0';
-    jsonp(`${url}&FNAME=${fname}&LNAME=${lname}&EMAIL=${email}&FLAVOR=${flavor}`, { param: 'c' }, (_, data) => {
-        const { msg, result } = data
-        // do something with response
+    jsonp(`${url}&FNAME=${fname}&LNAME=${lname}&EMAIL=${email}&FLAVOR=${flavor}`, { param: 'c' }, (err, data) => {
+      if (err) {
+        // Handle error
         setIsSubmitting(false);
-        alert(msg);
-        // onSignupComplete();
+        setError('An error occurred. Please try again.');
+      } else {
+        setIsSubmitting(false);
+        onSignupComplete();
+      }  
     });
   };
 
@@ -62,13 +38,14 @@ const ChewCrew = ({ onSignupComplete }) => {
         personality quiz
       </h1>
       <h1 className='desc-text'>One last thing...</h1>
+      {error && <p style={{ color: 'red' }}>{error}</p>}
       <form 
           id="mc-embedded-subscribe-form" 
           className="form-container"
           name="mc-embedded-subscribe-form"
           onSubmit={handleSubmit}>
         <div className="questions-container">
-          <input
+        <input
           id="mce-FNAME"
           name="FNAME"
           type="text"
@@ -106,7 +83,6 @@ const ChewCrew = ({ onSignupComplete }) => {
           {isSubmitting ? 'Submitting...' : 'See Results'}
         </button>
       </form>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
     </div>
   );
 };

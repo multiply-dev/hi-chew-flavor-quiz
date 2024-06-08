@@ -22,11 +22,27 @@
   flex-direction: column;
 }
 
+input {
+  background-color: #FF6F89;
+  border: 2px solid #FFD101;
+}
+
+label {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Montserrat', sans-serif;
+  opacity: 1; /* Firefox */
+  padding: 1rem;
+}
+
 .questions-container {
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  margin: 2rem;
 }
 
 .chew-crew-container {
