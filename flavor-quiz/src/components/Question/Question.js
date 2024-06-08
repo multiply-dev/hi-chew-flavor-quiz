@@ -23,15 +23,11 @@ const Question = ({ question, onAnswer }) => {
 
   return (
     <div className='question-container'>
-      <svg viewBox="0 0 400 40" width="400" height="40">
-        <text x="55" y="30" fill="white" font-size="40" font-weight="900" stroke="white" stroke-width="3" letter-spacing="2">
-          <tspan x="55" y="30">DESSERT MIX</tspan>
-        </text>
-        <text x="55" y="30" fill="#FF6F89" font-size="40" font-weight="900" letter-spacing="2">
-          <tspan x="55" y="30">DESSERT MIX</tspan>
-        </text>
-      </svg>
-      <h1 className='title-text'>personality quiz</h1>
+      <h1 className='title-text'>
+        <span className="dessert-mix">Dessert Mix</span>
+        <br></br> 
+        personality quiz
+      </h1>
       <h1 className='progress-text'>{question.id}/12</h1>
       <h1 className='question-text'>{question.question}</h1>
       <div className="choices-container">

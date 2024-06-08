@@ -118,13 +118,15 @@ const Results = ({ answers }) => {
   }
 
   return (
-    // <img src={strawberryFull} className="full-image" />
     <div className="results-container">
       <div className="description-container">
         <img src={flavorImage} alt="Flavor Image" className="flavor-image" />
         <div className="flavor-container">
-          <h1 className="perfect-text">Your perfect flavor is</h1>
-          <h1 className="flavor-text">{flavor}!</h1>
+          <h1 className="flavor-text">
+            <span className="perfect-text">Your perfect flavor is</span>
+            <br></br> 
+            {flavor}!
+          </h1>
           <img src={pillowImage} alt="Pillow Image" className="pillow-image" />
           <p>{description}</p>
         </div>
