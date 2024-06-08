@@ -1,0 +1,50 @@
+.desc-text {
+  font-weight:700;
+  min-width: 14rem;
+  max-width: 27rem;
+}
+
+.dessert-mix {
+  color: #FF6F89;
+  font-weight:900;
+  text-shadow: 
+  -1px -1px 0 #fff,  
+  1px -1px 0 #fff,
+  -1px 1px 0 #fff,
+  1px 1px 0 #fff,
+  0px 0px 1px #fff; 
+  text-transform: uppercase;
+}
+
+.form-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.questions-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.chew-crew-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.submit-button {
+  background-color: #16478E;
+  border: none;
+  font-size: medium;
+  text-transform: uppercase;
+}
+
+.title-text {
+  font-size: 40px;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}

@@ -39,6 +39,7 @@ button.selected {
   background-color: #16478E;
   border: none;
   font-size: medium;
+  text-transform: uppercase;
 }
 
 .progress-text {

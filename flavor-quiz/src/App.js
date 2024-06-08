@@ -83,9 +83,9 @@ const App = () => {
           onAnswer={handleAnswer}
         />
       )
-      //  : !isSignedUp ? (
-      //   <ChewCrew onSignupComplete={handleSignupComplete} />
-      // ) 
+       : !isSignedUp ? (
+        <ChewCrew onSignupComplete={handleSignupComplete} />
+      ) 
       : (
         <Results answers={answers} />
       )}
