@@ -6,11 +6,7 @@ import './Footer.css'
 
 const Header = () => {
   return (
-    <footer className="footer">
-      <div className="footer-image-container">
-        <img src={footerImage} alt="Footer" className="footer-image" />
-      </div>
-    </footer>
+    <img src={footerImage} alt="Footer" className="footer-image" />
   );
 };
 
