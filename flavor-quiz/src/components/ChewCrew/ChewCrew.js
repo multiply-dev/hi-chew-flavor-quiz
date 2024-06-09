@@ -4,6 +4,7 @@ import jsonp from 'jsonp';
 import './ChewCrew.css'
 
 const ChewCrew = ({ onSignupComplete }) => {
+  const MailchimpURL = process.env.REACT_APP_MAILCHIMP;
   const [fname, setFName] = useState('');
   const [lname, setLName] = useState('');
   const [email, setEmail] = useState('');
@@ -11,13 +12,11 @@ const ChewCrew = ({ onSignupComplete }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState(null);
 
-  // @TODO: Add url to secrets file?
-  // @TODO: Error handling
   const handleSubmit = e => {
     setIsSubmitting(true);
     setError(null);
     e.preventDefault();
-    const url = 'https://morinaga-america.us4.list-manage.com/subscribe/post-json?u=59d91747229d2e090df15562e&amp;id=cc938b2fca&amp;f_id=0058c0e1f0';
+    const url = MailchimpURL;
     jsonp(`${url}&FNAME=${fname}&LNAME=${lname}&EMAIL=${email}&FLAVOR=${flavor}`, { param: 'c' }, (err, data) => {
       if (err) {
         // Handle error
@@ -45,39 +44,40 @@ const ChewCrew = ({ onSignupComplete }) => {
           name="mc-embedded-subscribe-form"
           onSubmit={handleSubmit}>
         <div className="questions-container">
-        <input
-          id="mce-FNAME"
+          <div className="sign-up-text">Sign up for our newsletter </div>
+          <input
+            id="mce-FNAME"
           name="FNAME"
           type="text"
           value={fname}
           onChange={(e) => setFName(e.target.value)}
           placeholder="First Name"
-        />
-        <input
-          id="mce-LNAME"
+          />
+          <input
+            id="mce-LNAME"
           name="LNAME"
           type="text"
           value={lname}
           onChange={(e) => setLName(e.target.value)}
           placeholder="Last Name"
-        />
-        <input
-          id="mce-EMAIL"
+          />
+          <input
+            id="mce-EMAIL"
           name="EMAIL"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
+          placeholder="Email Address"
           required
-        />
-        <input
-          id="mce-FLAVOR"
+          />
+          <input
+            id="mce-FLAVOR"
           name="FLAVOR"
           type="text"
           value={flavor}
           onChange={(e) => setFlavor(e.target.value)}
           placeholder="Favorite Flavor"
-        />
+          />
         </div>
         <button className="submit-button" type="submit" disabled={isSubmitting}>
           {isSubmitting ? 'Submitting...' : 'See Results'}
