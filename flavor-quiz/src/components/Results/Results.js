@@ -9,9 +9,6 @@ import strawberryPillow from '../../assets/strawberry-pillow.png';
 
 import './Results.css'
 
-// TODO: strongly type pesronality traits
-
-
 const mostCommon = arr => {
   const count = [0, 1, 2].map(num => ({
     value: num,

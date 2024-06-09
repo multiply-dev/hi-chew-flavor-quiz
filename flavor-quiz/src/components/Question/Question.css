@@ -1,5 +1,6 @@
 button.selected {
   background-color: #FFD101;
+  border: 0.5px solid #000;
   color: #16478E;
 }
 
@@ -39,6 +40,7 @@ button.selected {
   background-color: #16478E;
   border: none;
   font-size: medium;
+  text-transform: uppercase;
 }
 
 .progress-text {
