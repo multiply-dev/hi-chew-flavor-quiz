@@ -50,11 +50,13 @@ button.selected {
 .question-container {
   align-items: center;
   background-color: #FF6F89;
+  box-sizing: border-box;
   color: #FFF;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   padding: 2rem 3rem 0;
+  width: 100%;
 }
 
 .question-text {
