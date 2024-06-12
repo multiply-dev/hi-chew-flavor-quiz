@@ -52,6 +52,7 @@ const ChewCrew = ({ onSignupComplete }) => {
           value={fname}
           onChange={(e) => setFName(e.target.value)}
           placeholder="First Name"
+          required
           />
           <input
             id="mce-LNAME"
@@ -60,6 +61,7 @@ const ChewCrew = ({ onSignupComplete }) => {
           value={lname}
           onChange={(e) => setLName(e.target.value)}
           placeholder="Last Name"
+          required
           />
           <input
             id="mce-EMAIL"
@@ -77,6 +79,7 @@ const ChewCrew = ({ onSignupComplete }) => {
           value={flavor}
           onChange={(e) => setFlavor(e.target.value)}
           placeholder="Favorite Flavor"
+          required
           />
         </div>
         <button className="submit-button" type="submit" disabled={isSubmitting}>
