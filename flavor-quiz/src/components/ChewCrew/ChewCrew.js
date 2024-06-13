@@ -44,7 +44,7 @@ const ChewCrew = ({ onSignupComplete }) => {
           name="mc-embedded-subscribe-form"
           onSubmit={handleSubmit}>
         <div className="questions-container">
-          <div className="sign-up-text">Sign up for our newsletter </div>
+          <div className="sign-up-text">Sign up for our Chew-Crew newsletter<sup>*</sup></div>
           <input
             id="mce-FNAME"
           name="FNAME"
@@ -86,6 +86,8 @@ const ChewCrew = ({ onSignupComplete }) => {
           {isSubmitting ? 'Submitting...' : 'See Results'}
         </button>
       </form>
+
+      <p className="disclaimer-text"><em>*Subscribers will receive updates on new flavor launches, promotional deals, upcoming events, etc.</em></p>
     </div>
   );
 };
