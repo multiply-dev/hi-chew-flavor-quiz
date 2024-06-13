@@ -23,6 +23,13 @@
   text-transform: uppercase;
 }
 
+.disclaimer-text {
+  font-size: small;
+  margin-top: 3rem;
+  padding: 0 2.5rem;
+  text-align: center;
+}
+
 .form-container {
   align-items: center;
   display: flex;
@@ -70,8 +77,10 @@ input:-webkit-autofill:active {
 .sign-up-text {
   color: #FFF;
   font-weight: 600;
-  padding: 0.65rem 5rem 0.65rem 1rem;
+  padding: 0.65rem 1.5rem 0.65rem 1.5rem;
+  text-align: center;
   text-transform: uppercase;
+  
 }
 
 .submit-button {

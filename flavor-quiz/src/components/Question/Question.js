@@ -46,7 +46,7 @@ const Question = ({ question, onAnswer }) => {
         disabled={selectedChoice === null}
         onClick={handleNextClick}
       >
-        Next Question
+        {question.id == 12 ? "Complete Quiz" : "Next Question"}
       </button>
     </div>
   );
