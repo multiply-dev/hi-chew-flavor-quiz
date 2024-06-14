@@ -114,23 +114,23 @@ const Results = ({ answers }) => {
   return (
     <div className="results-container">
       <div className="description-container">
-        <img src={flavorImage} alt="Flavor Image" className="flavor-image" />
         <div className="flavor-container">
           <h1 className="flavor-text">
             <span className="perfect-text">Your perfect<br></br> flavor is</span>
             <br></br> 
             {flavor}!
           </h1>
-          <img src={pillowImage} alt="Pillow Image" className="pillow-image" />
           <p>{description}</p>
         </div>
       </div>
+      <img src={flavorImage} alt="Flavor Image" className="flavor-image" />
+      <img src={pillowImage} alt="Pillow Image" className="pillow-image" />
       <div className="personality-container">
         <h2 className="personality-text">Personality Traits:</h2>
         {personalityTraits.map((trait, index) => (          
-          <div key={index}>
-            <h4 className="trait-name">{trait.trait}</h4>
-            <p>{trait.desc}</p>
+          <div className={`trait-container trait-${index}`} key={index}>
+            <h4 className={`trait-name trait-name-${index}`}>{trait.trait}</h4>
+            <p class="trait-desc">{trait.desc}</p>
           </div>
         ))}
       </div>
