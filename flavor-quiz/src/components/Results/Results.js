@@ -123,7 +123,7 @@ const Results = ({ answers }) => {
           <p>{description}</p>
         </div>
       </div>
-      <img src={flavorImage} alt="Flavor Image" className="flavor-image" />
+      {/* <img src={flavorImage} alt="Flavor Image" className="flavor-image" /> */}
       <img src={pillowImage} alt="Pillow Image" className="pillow-image" />
       <div className="personality-container">
         <h2 className="personality-text">Personality Traits:</h2>
